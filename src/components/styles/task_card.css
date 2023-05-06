@@ -1,0 +1,54 @@
+.task-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin: 0.5rem;
+    padding: 0 1rem 1rem 1rem;
+    border-top: 6px solid purple;
+    overflow: hidden;
+}
+
+.task-description {
+    letter-spacing: 0.02rem;
+}
+
+.task-date {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+.mark-done {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: .6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    background-color: #643a6b;
+    color: white;
+    text-transform: capitalize;
+    border: none;
+    font-size: 1rem;   
+}
+
+.mark-done:hover {
+    background-color: purple;
+}
+
+.check-icon {
+    vertical-align: middle;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    
+}
