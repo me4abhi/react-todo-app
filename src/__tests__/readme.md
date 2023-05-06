@@ -1,0 +1,1 @@
+The final folder in this structure is for all your test code. Generally on smaller projects like this I find that people tend to store all their tests in one folder (that is if they write any tests at all). Overall, I think this is fine for smaller projects, but again this is something I would change as your project grows in size.

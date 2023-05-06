@@ -1,0 +1,33 @@
+#input-task {
+  display: flex;
+  justify-content: center;
+}
+
+input,
+button {
+  margin: 2rem;
+  padding: 1rem;
+  width: 50vw;
+  font-size: 1.4rem;
+}
+
+button {
+  width: 20vw;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  #input-task {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  input {
+    margin-right: 0;
+  }
+
+  button {
+    margin-left: 0;
+  }
+}

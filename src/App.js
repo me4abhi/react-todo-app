@@ -1,10 +1,18 @@
 import "./App.css";
-import TodoList from "./components/TodoList";
+import FinishedTasks from "./pages/FinishedTasks";
+import Header from "./components/Header";
+import InputTask from "./components/InputTask";
+import PendingTasks from "./components/PendingTasks";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <TodoList />
+      <Header />
+      <InputTask />
+      <PendingTasks />
+      <Footer />
+      {/* <FinishedTasks /> */}
     </div>
   );
 }
