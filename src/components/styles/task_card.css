@@ -12,43 +12,63 @@
 
 .task-description {
     letter-spacing: 0.02rem;
+    overflow-wrap: break-word;
 }
 
 .task-date {
     margin-top: 0;
     margin-bottom: 2rem;
-    font-size: 0.85rem;
+    font-size: 0.80rem;
     font-weight: 500;
-    text-align: right;
 }
 
-.mark-done {
+.task-ops {
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    margin: 0;
-    padding: .6rem;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
-    background-color: #643a6b;
-    color: white;
-    text-transform: capitalize;
-    border: none;
-    font-size: 1rem;   
+    flex-direction: row;
+    border-radius: 10px 0 0 0;
+    background-color: #393646;
+    overflow: hidden;
 }
 
-.mark-done:hover {
-    background-color: purple;
+.task-card .task-ops {
+    visibility: hidden;
 }
 
-.check-icon {
-    vertical-align: middle;
-    color: white;
+.task-card:hover .task-ops {
+    visibility: visible;
+}
+
+.task-icons {
+    padding: .3rem;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.task-icons:hover {
+    background-color: #161616;
+}
+
+.task-icons:nth-child(1):hover {
+    color: orangered;
+}
+
+.task-icons:nth-child(2):hover {
+    color: greenyellow;
+}
+
+.task-icons:nth-child(3):hover {
+    color: red
 }
 
 @media screen and (max-width: 800px) {
     
+}
+
+@media screen and (max-width: 550px) {
+    .task-card .task-ops {
+        visibility: visible;
+    }
 }

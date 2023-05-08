@@ -1,16 +1,14 @@
 import TaskCard from "./TaskCard";
-import "./styles/tasks_grid.css"
+import "./styles/tasks_grid.css";
 
-function PendingTasks() {
-    return (
-        <div id="tasks-grid">
-            <TaskCard />
-            <TaskCard />
-            <TaskCard />
-            <TaskCard />
-            <TaskCard />
-        </div>
-    );
+function PendingTasks({ tasks }) {
+  return (
+    <div id="tasks-grid">
+      {tasks.map((task, index) => (
+        <TaskCard task={task} key={index} />
+      ))}
+    </div>
+  );
 }
 
 export default PendingTasks;

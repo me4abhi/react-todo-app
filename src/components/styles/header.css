@@ -1,11 +1,10 @@
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 0.1rem 2rem;
   background-color: #393646;
   color: white;
-  font-size: 1rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
@@ -13,6 +12,13 @@ header {
 h1 {
   color: whitesmoke;
   position: relative;
+  margin-right: auto;
+  cursor: default;
+}
+
+#app-name {
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 #h1-pill-design {
@@ -33,4 +39,15 @@ header > a {
 header > a:hover {
   color: lightgray;
   text-decoration: overline;
+}
+
+@media screen and (max-width: 550px) {
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  header > a {
+    font-size: 1rem;
+  }
 }

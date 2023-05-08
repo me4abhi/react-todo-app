@@ -1,3 +1,7 @@
-TO FIX
-```````
+`TO FIX`
 => Setting header width to 100% results in overflow.
+
+
+
+`FURTHER MODIFICATIONS THAT CAN BE DONE`
+=> Limit the lines of text displayed (in case task description is too long) in the tasks_card component.

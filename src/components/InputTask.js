@@ -1,11 +1,12 @@
 import "./styles/input_task.css";
 
-function InputTask() {
+function InputTask({newTask, addNewTask, handleTasks}) {
+
   return (
-    <div id="input-task">
-      <input />
-      <button>Add</button>
-    </div>
+    <form onSubmit={(e) => handleTasks(e)} id="input-task">
+      <input type="text" value={newTask} onChange={(e) => addNewTask(e.target.value)} required />
+      <button type="submit">Add</button>
+    </form>
   );
 }
 

@@ -19,7 +19,6 @@ button {
 
 @media screen and (max-width: 800px) {
   #input-task {
-    align-items: center;
     justify-content: space-around;
   }
 
@@ -29,5 +28,12 @@ button {
 
   button {
     margin-left: 0;
+  }
+  
+}
+
+@media screen and (max-width: 550px) {
+  input, button {
+    font-size: 1rem;
   }
 }

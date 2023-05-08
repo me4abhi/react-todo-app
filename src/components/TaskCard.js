@@ -1,17 +1,24 @@
 import "./styles/task_card.css";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import TaskAltIcon from "@mui/icons-material/TaskAlt";
-import DoneAllIcon from '@mui/icons-material/DoneAll';
+import DriveFileRenameOutlineOutlinedIcon from '@mui/icons-material/DriveFileRenameOutlineOutlined';
+import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined';
+import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 
-function TaskCard() {
+function TaskCard({ task, index }) {
   return (
-    <div className="task-card">
-      <h3 className="task-description">hello you beautiful thing</h3>
+    <div className="task-card" key={index}>
+      <h3 className="task-description">{task}</h3>
       <p className="task-date">Date & Time</p>
-      <button className="mark-done">
-        Mark Done
-        <TaskAltIcon fontSize="medium" className="check-icon" />
-      </button>
+      <div className="task-ops">
+        <div className="task-icons">
+          <DriveFileRenameOutlineOutlinedIcon fontSize="medium" className="edit-task" />
+        </div>
+        <div className="task-icons">
+          <DoneAllOutlinedIcon fontSize="medium" className="finish-task" />
+        </div>
+        <div className="task-icons">
+          <DeleteForeverOutlinedIcon fontSize="medium" className="remove-task" />
+        </div>
+      </div>
     </div>
   );
 }
