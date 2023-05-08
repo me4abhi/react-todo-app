@@ -11,6 +11,14 @@ button {
   border: none;
 }
 
+input {
+  background-color: whitesmoke;
+}
+
+input:focus {
+  outline: none;
+}
+
 button {
   background-color: lightgray;
   color: #000000;

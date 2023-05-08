@@ -5,7 +5,7 @@ import InputTask from "./components/InputTask";
 import TasksGrid from "./components/TasksGrid";
 import Footer from "./components/Footer";
 import { useState } from "react";
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
   const [newTask, setNewTask] = useState({
@@ -15,6 +15,7 @@ function App() {
     completed: false,
   });
   const [tasks, setTasks] = useState([]);
+  const [taskHistory, setTaskHistory] = useState([]);
 
   function addNewTask(inputTask) {
     setNewTask({
@@ -38,15 +39,44 @@ function App() {
     }
   }
 
-  function toggleComplete(key) {
-    const filteredList = tasks.map((task) => {
-      if (task.id === key) {
+  function toggleComplete(id) {
+    const modifiedList = tasks.map((task) => {
+      if (task.id === id) {
         task.completed = !task.completed;
       }
       return task;
     });
 
-    setTasks(filteredList);
+    setTasks(modifiedList);
+  }
+
+  function removeTask(id) {
+    const remainingList = [];
+    const removedList = [];
+
+    tasks.map((task) => {
+      if (task.id === id) {
+        removedList.push(task);
+      } else {
+        remainingList.push(task);
+      }
+    });
+
+    setTasks(remainingList);
+    setTaskHistory(removedList);
+  }
+
+  function editTask(id, newText) {
+    const editedTask = tasks.filter((task) => task.id === id);
+    removeTask(id);
+    setTasks([
+      ...tasks,
+      {
+        ...editedTask,
+        id: id,
+        task: newText,
+      },
+    ]);
   }
 
   return (
@@ -57,7 +87,12 @@ function App() {
         addNewTask={addNewTask}
         handleTasks={handleTasks}
       />
-      <TasksGrid tasks={tasks} toggleComplete={toggleComplete} />
+      <TasksGrid
+        tasks={tasks}
+        toggleComplete={toggleComplete}
+        removeTask={removeTask}
+        editTask={editTask}
+      />
       <Footer />
     </div>
   );

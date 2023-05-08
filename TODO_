@@ -11,3 +11,5 @@
 => Add a time limit for task to be completed.
 
 => Add alarm for task reminders.
+
+=> Show Snackbar if user tries to add a task that already exists.

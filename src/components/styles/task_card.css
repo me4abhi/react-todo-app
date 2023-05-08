@@ -1,11 +1,10 @@
 .task-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
   border-radius: 5px;
   background-color: whitesmoke;
   margin: 0.5rem;
   padding: 0 1rem 1rem 1rem;
+  resize: both;
   border-top: 6px solid purple;
   overflow: hidden;
 }

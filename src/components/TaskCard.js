@@ -4,13 +4,13 @@ import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
 import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 
-function TaskCard({ toggleComplete, id, task, date, completed }) {
+function TaskCard({ toggleComplete, removeTask, editTask, id, task, date, completed }) {
   return (
     <div
       className={completed ? "task-card completed-task" : "task-card"}
       key={id}
     >
-      <h3 className="task-description">{task}</h3>
+      <h3 contentEditable="true" className="task-description" onBlur={(e) => editTask(id, e.target.textContent)}>{task}</h3>
       <p className="task-date">~ {date}</p>
       <div className="task-ops">
         {!completed && (
@@ -28,7 +28,7 @@ function TaskCard({ toggleComplete, id, task, date, completed }) {
             <DoneAllOutlinedIcon fontSize="medium" className="finish-task" />
           )}
         </div>
-        <div className="task-icons">
+        <div className="task-icons" onClick={() => removeTask(id)}>
             <DeleteForeverOutlinedIcon
               fontSize="medium"
               className="remove-task"
