@@ -1,74 +1,90 @@
 .task-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    background-color: #ffffff;
-    margin: 0.5rem;
-    padding: 0 1rem 1rem 1rem;
-    border-top: 6px solid purple;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin: 0.5rem;
+  padding: 0 1rem 1rem 1rem;
+  border-top: 6px solid purple;
+  overflow: hidden;
+}
+
+/* Explicitly defining order | Not needed though */
+div {
+    order: 1;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: rgba(87, 8, 87, 40%);
+  background-color: rgba(87, 8, 87, 20%);
+  border-top: 10px solid rgba(0, 0, 0, 50%);
+  order: 2;
 }
 
 .task-description {
-    letter-spacing: 0.02rem;
-    overflow-wrap: break-word;
+  letter-spacing: 0.02rem;
+  overflow-wrap: break-word;
 }
 
 .task-date {
-    margin-top: 0;
-    margin-bottom: 2rem;
-    font-size: 0.80rem;
-    font-weight: 500;
+  margin-top: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .task-ops {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    border-radius: 10px 0 0 0;
-    background-color: #393646;
-    overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px 0 0 0;
+  background-color: #393646;
+  overflow: hidden;
+}
+
+.undo-finish {
+  padding-left: 0.3rem;
+  color: #938dad;
 }
 
 .task-card .task-ops {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .task-card:hover .task-ops {
-    visibility: visible;
+  visibility: visible;
 }
 
 .task-icons {
-    padding: .3rem;
-    color: whitesmoke;
-    cursor: pointer;
+  padding: 0.3rem;
+  color: whitesmoke;
+  cursor: pointer;
 }
 
 .task-icons:hover {
-    background-color: #161616;
+  background-color: #161616;
 }
 
-.task-icons:nth-child(1):hover {
-    color: orangered;
+.edit-task:hover {
+  color: orangered;
 }
 
-.task-icons:nth-child(2):hover {
-    color: greenyellow;
+.finish-task:hover {
+  color: greenyellow;
 }
 
-.task-icons:nth-child(3):hover {
-    color: red
+.remove-task:hover {
+  color: red;
 }
 
 @media screen and (max-width: 800px) {
-    
 }
 
 @media screen and (max-width: 550px) {
-    .task-card .task-ops {
-        visibility: visible;
-    }
+  .task-card .task-ops {
+    visibility: visible;
+  }
 }

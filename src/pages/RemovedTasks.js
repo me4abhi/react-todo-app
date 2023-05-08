@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import "../components/styles/tasks_grid.css";
 import TaskCard from "../components/TaskCard";
 
-function FinishedTasks() {
+function RemovedTasks() {
   return (
     <>
       <Header />
@@ -15,4 +15,4 @@ function FinishedTasks() {
   );
 }
 
-export default FinishedTasks;
+export default RemovedTasks;

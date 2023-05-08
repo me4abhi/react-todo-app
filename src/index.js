@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FinishedTasks from "./pages/FinishedTasks";
+import RemovedTasks from "./pages/RemovedTasks";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,7 +13,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/finished-tasks" element={<FinishedTasks />} />
+        <Route path="/removed-tasks" element={<RemovedTasks />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

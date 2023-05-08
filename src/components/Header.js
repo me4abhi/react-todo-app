@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/header.css";
 import { Outlet, Link, NavLink } from "react-router-dom";
+import HistoryOutlinedIcon from '@mui/icons-material/HistoryOutlined';
 
 function Header() {
   return (
@@ -12,7 +13,9 @@ function Header() {
             Tasks Todo
           </Link>
         </h1>
-        <NavLink to="/finished-tasks">Finished</NavLink>
+        <NavLink to="/removed-tasks">
+          <HistoryOutlinedIcon fontSize="large" />
+        </NavLink>
       </header>
     </>
   );

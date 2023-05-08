@@ -5,35 +5,30 @@
 
 input,
 button {
-  margin: 2rem;
+  margin: 2rem 0;
   padding: 1rem;
-  width: 50vw;
   font-size: 1.4rem;
+  border: none;
 }
 
 button {
-  width: 20vw;
-  text-transform: uppercase;
+  background-color: lightgray;
+  color: #000000;
+  text-transform: capitalize;
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #353646;
+  color: white;
+}
+
 @media screen and (max-width: 800px) {
-  #input-task {
-    justify-content: space-around;
-  }
-
-  input {
-    margin-right: 0;
-  }
-
-  button {
-    margin-left: 0;
-  }
-  
 }
 
 @media screen and (max-width: 550px) {
-  input, button {
+  input,
+  button {
     font-size: 1rem;
   }
 }

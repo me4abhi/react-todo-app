@@ -1,7 +1,13 @@
 `TO FIX`
 => Setting header width to 100% results in overflow.
+=> Set input_task component's size to be in coherence with other components. (check responsiveness with very small screens in Chrome Devtools)
 
 
 
 `FURTHER MODIFICATIONS THAT CAN BE DONE`
+
 => Limit the lines of text displayed (in case task description is too long) in the tasks_card component.
+
+=> Add a time limit for task to be completed.
+
+=> Add alarm for task reminders.
